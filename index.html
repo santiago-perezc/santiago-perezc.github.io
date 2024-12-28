@@ -1,179 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google Analytics -->
+    <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FTRH7SEH5"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-6FTRH7SEH5');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="wm3FU4amzJM3DNm_mJjvydsTVG3A-HDJt4UTc4wju94" />
-    <link href="styles.css" rel="stylesheet">
-    <link href="normalize.css" rel="stylesheet">
-    <title>Santiago Perez-Cardona</title>
-    <link rel="shortcut icon" type="image/jpg" href="photos/small/favicon.png" />
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-        }
-        .nav-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 1rem;
-        }
-        .nav-menu li {
-            list-style: none;
-        }
-        .nav-link {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: #007bff;
-        }
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 0.3rem;
-        }
-        .hamburger .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-        }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .profile {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .profile img {
-            max-width: 200px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-        .profile p {
-            margin: 0.5rem 0;
-        }
-        .post {
-            margin-bottom: 1.5rem;
-        }
-        .papertitle {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f8f9fa;
-            border-top: 1px solid #ddd;
-        }
-        footer a {
-            text-decoration: none;
-            color: #333;
-            margin: 0 0.5rem;
-        }
-        footer a:hover {
-            color: #007bff;
-        }
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                background-color: #f8f9fa;
-                padding: 1rem;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-                z-index: 100;
-                border-bottom: 1px solid #ddd;
-            }
-            .nav-menu.active {
-                display: flex;
-            }
-            .hamburger {
-                display: flex;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="/index.html" class="nav-logo">Santiago Perez-Cardona</a>
-        <ul class="nav-menu">
-            <li><a href="/index.html" class="nav-link">Home</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-6FTRH7SEH5');
+    </script>          
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-site-verification" content="wm3FU4amzJM3DNm_mJjvydsTVG3A-HDJt4UTc4wju94" />
+        <script defer src="swup/dist/swup.min.js"></script>
+        <script defer src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <link href="styles.css" rel="stylesheet">
+        <link href="normalize.css" rel="stylesheet">
+        <title>Santiago Perez-Cardona</title>
+        <link rel="shortcut icon" type="image/jpg" href="photos/small/favicon.png"/>
+    </head>
+ 
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/index.html" class="nav-logo"><b>Santiago Perez-Cardona</b></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+        </nav>
     </header>
-    <main>
-        <div class="profile">
-            <img src="photos/photo_profile2.jpg" alt="Santiago Perez-Cardona">
-            <p>Welcome! I'm a second-year PhD student in Economics at <a href="https://economics.uchicago.edu/" target="_blank" class="externalsites">The University of Chicago</a>.</p>
-            <p>I'm interested in applied microeconomics, particularly development, labor, and public economics.</p>
-            <p>I hold an M.A. and a B.A. in Economics from Universidad de los Andes in Bogotá, Colombia.</p>
-            <p>You can find my CV <a href="cv/SPC_CV.pdf" target="_blank" title="My CV">here</a>.</p>
-        </div>
+
+    
+    <main id="swup" class="transition-fade">
+
+        <table width="100%" align="center" class="table
+        table-responsive desktop"> 
+            <tr>
+            <td VALIGN=TOP style="height:320px"><img src="photos/photo_profile2.jpg" width="300" height="300" ></td>
+            <td align="center" VALIGN=TOP rowspan="2" style="padding-left:5%;" ><p> 
+            Welcome! I'm a second-year PhD student in Economics at 
+                <a href="https://economics.uchicago.edu/" target="_blank" class="externalsites">The University of Chicago</a>.  <br> <br> 
+            
+            I'm interested in applied microeconomics, particularly development, labor, and public economics.  <br> <br>     
+                
+            I hold an M.A. and a B.A. in Economics from Universidad de los Andes in Bogotá, Colombia.    <br> <br> 
+                
+            You can find my CV <a href="cv/SPC_CV.pdf" target="_blank" title="My cv"><font color="#2471A3">here</font></a>.</p>
+
+        <p class="subtitle" style="margin-top: 3%"> Working Papers </p>
+        
+        </div>   
+
         <div class="post">
-            <p class="papertitle">Perceived Social Acceptance and Migrants’ Financial Inclusion (2024)</p>
-            <p><a href="documents/d01-v03-draft-barboni-deroux-perezcardona.pdf" target="_blank" class="docs">[PDF here]</a> (With Giorgia Barboni and Nicolas de Roux)</p>
-        </div>
+        <p class="papertitle"> <b style="font-size: 13pt; margin-top: 2%;"> Perceived Social Acceptance and Migrants’ Financial Inclusion  </b>  (2024) <a
+        href="documents/d01-v03-draft-barboni-deroux-perezcardona.pdf" target="_blank" class="docs"> [PDF here] </a> 
+            (With <a href="https://www.giorgiabarboni.com/home/Welcome.html" target="_blank" class="externalsites">Giorgia Barboni</a> and <a href="https://sites.google.com/site/nicoderoux/" target="_blank" class="externalsites">Nicolas de Roux</a>) </a> </p>         
+                    
+        </div>   
+
+        <p class="subtitle" style="margin-top: 3%"> Work in Progress </p>
+        
+       </div>     
+
         <div class="post">
-            <p class="papertitle">Internal Cohesion of Armed Groups and Civilian Control in Colombia (2024)</p>
-            <p>(With Reynell Boadilla and Lina M. Ramirez)</p>
-        </div>
+        <p class="papertitle"> <b style="font-size: 13pt; margin-top: 2%;"> Internal Cohesion of Armed Groups and Civilian Control in Colombia  </b>  (2024) 
+            (With Reynell Boadilla and Lina M. Ramirez) </p>         
+                    
+        </div>    
+
         <div class="post">
-            <p class="papertitle">Unpacking the Demand for Technical and Vocational Education: Insights from Colombia (2024)</p>
-            <p>(With <a href="https://www.hks.harvard.edu/centers/cid/about-cid/people/phd-affiliates/germ%C3%A1n-david-orbegozo-rodr%C3%ADguez" target="_blank" class="externalsites">German Orbegozo-Rodriguez</a>)</p>
-        </div>
+        <p class="papertitle"> <b style="font-size: 13pt; margin-top: 2%;"> Unpacking the Demand for Technical and Vocational Education: Insights from Colombia  </b>  (2024) 
+            (With <a href="https://www.hks.harvard.edu/centers/cid/about-cid/people/phd-affiliates/germ%C3%A1n-david-orbegozo-rodr%C3%ADguez" target="_blank" class="externalsites"> German Orbegozo-Rodriguez</a>) </a> </p>          
+                    
+        </div>     
+                
+        <p class="subtitle" style="margin-top: 3%"> Pre-doctoral Work </p>
+        
+        </div>            
+            
+        <div class="post">
+        <p class="papertitle"> <b style="font-size: 13pt; margin-top: 2%;"> Implementation Quality of an Early Childhood Parenting Program in Colombia and Child Development.  </b>  (2023). Pediatrics <a
+        href="documents/Pediatrics.pdf" target="_blank" class="docs"> [PDF here] </a>
+            (With <a href="https://sites.google.com/view/raquelbernal" target="_blank" class="externalsites">Raquel Bernal</a>, <a href="https://www.bangor.ac.uk/staff/human-behavioural-sciences/helen-henningham-081762/en#publications" target="_blank" class="externalsites">Helen Baker-Henningham</a> and Maria Gomez) </a> </p>         
+                                
+        </div>        
+
+        <div class="post">
+        <p class="papertitle"><b style="font-size: 13pt;"> The Effects of Teacher Job Burnout on Child Development </b> (With <a href="https://sites.google.com/view/raquelbernal" target="_blank" class="externalsites">Raquel Bernal</a> and Maria de la Paz Ferro)</p>
+            
+        </div>                                
+
+        <div class="post">
+        <p class="papertitle"> <b style="font-size: 13pt; margin-top: 2%;"> Let the Rebels Rule? Evidence on the Economic Effects of Rebel Governance in Colombia  </b>  (2022). Documento CEDE No. 3. <a
+        href="documents/masters-thesis.pdf" target="_blank" class="docs"> [PDF here] </a> </p>
+ 
+        </div>                              
+        
+        <div>
+        </main>
+            
+            <p class= "second">
+            </p></td>
+            </tr>
+            <tr>
+            <td align="left" VALIGN=TOP style="width:300px">
+            <h1 style="margin-bottom: 0%;"> Contact Information</h1>
+            <p style="font-size: 12pt;"> The University of Chicago </p>
+            <p style="font-size: 12pt;"> Chicago, IL </p>
+            <p style="font-size: 12pt; margin-bottom: 5%;"> sperezcardona@uchicago.edu </p>
+            <p><a href="mailto:sperezcardona@uchicago.edu"
+            target="mailto:sperezcardona@uchicago.edu" style="margin-right:
+            10%;">
+            <img src="photos/small/mail.svg" width="15%" style="margin-top:
+            2%;"> </a>
+            <a href="https://linkedin.com/in/scperez"
+            target="https://linkedin.com/in/scperez" style="margin-right:
+            10%;">
+            <img src="photos/small/linkedin.svg" width="15%" style="margin-top:
+            2%;"> </a> 
+            <a href="https://twitter.com/scperez97"
+            target="https://twitter.com/scperez97" style="margin-right: 10%;">
+            <img src="photos/small/twitter.svg" width="15%" style="margin-top:
+            2%;"> </a> 
+            <a href="https://github.com/Santiago-PerezC"
+            target="https://github.com/Santiago-PerezC" > 
+            <img src="photos/small/github.svg" width="15%" style="margin-top: 2%;">
+            </a></p>
+            </td>
+            <td></td>
+        </tr>
+        </table>
+        
+
+
+        
     </main>
-    <footer>
-        <p>Contact: <a href="mailto:sperezcardona@uchicago.edu">sperezcardona@uchicago.edu</a></p>
-        <p>
-            <a href="https://linkedin.com/in/scperezc" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com/scperez97" target="_blank">Twitter</a> |
-            <a href="https://github.com/Santiago-PerezC" target="_blank">GitHub</a>
-        </p>
-    </footer>
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    </script>
+    
 </body>
 </html>
