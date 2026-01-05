@@ -137,7 +137,20 @@ a:hover {
 .affiliation {
     font-size: 1rem;
     color: var(--color-text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.email {
+    font-size: 0.9375rem;
     margin-bottom: var(--spacing-md);
+}
+
+.email a {
+    color: var(--color-text-muted);
+}
+
+.email a:hover {
+    color: var(--color-primary);
 }
 
 .social-links {
@@ -259,6 +272,45 @@ a:hover {
     background-color: var(--color-accent);
     color: white;
     text-decoration: none;
+}
+
+/* Pre-doctoral Work - Subdued styling */
+.predoctoral {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+}
+
+.predoctoral h3 {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.paper-simple {
+    margin-bottom: var(--spacing-xs);
+}
+
+.paper-simple p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-xs);
+}
+
+.paper-simple strong {
+    font-weight: 500;
+    color: var(--color-text-light);
+}
+
+.paper-link-inline {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+}
+
+.paper-link-inline:hover {
+    color: var(--color-primary);
 }
 
 /* Contact Section */
