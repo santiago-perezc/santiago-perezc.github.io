@@ -1,0 +1,159 @@
+% Contemporary Clean Academic CV Template
+% Inspired by Awesome-CV design
+% Modern typography with subtle teal accents
+
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage{charter}
+\usepackage[tracking=true]{microtype}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tikz}
+
+% Define colors
+\definecolor{accent}{HTML}{1A5E6D}
+\definecolor{darktext}{HTML}{1C1C1C}
+\definecolor{graytext}{HTML}{5D5D5D}
+\definecolor{lightaccent}{HTML}{E8F4F6}
+
+% Page geometry
+\geometry{
+  letterpaper,
+  left=0.9in,
+  right=0.9in,
+  top=0.8in,
+  bottom=0.8in
+}
+
+% Hyperref setup
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  pdfauthor={Santiago Perez-Cardona},
+  pdftitle={Santiago Perez-Cardona - CV},
+  pdfsubject={Curriculum Vitae}
+}
+
+% Custom section command with accent bar
+\newcommand{\cvsection}[1]{%
+  \vspace{14pt}%
+  {\color{accent}\large\scshape #1}%
+  \par\vspace{-2pt}%
+  {\color{accent}\rule{\linewidth}{1.5pt}}%
+  \par\vspace{6pt}%
+}
+
+% Subsection formatting
+\newcommand{\cvsubsection}[1]{%
+  \vspace{6pt}%
+  {\color{accent}\normalsize\itshape #1}%
+  \par\vspace{3pt}%
+}
+
+% No paragraph indent
+\setlength{\parindent}{0pt}
+
+% Custom list settings
+\setlist[itemize]{leftmargin=1em, itemsep=2pt, parsep=0pt, topsep=4pt, label={\color{accent}$\circ$}}
+
+% Entry command
+\newcommand{\cventry}[2]{%
+  \item \textbf{#1}\\{\small\color{graytext}#2}%
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge\color{accent}\scshape Santiago Perez-Cardona}
+
+  \vspace{10pt}
+
+  {\large\itshape Ph.D. Candidate in Economics}
+
+  \vspace{8pt}
+
+  {\small\color{graytext}
+  The University of Chicago
+  \quad\textbar\quad
+  \href{mailto:sperezcardona@uchicago.edu}{sperezcardona@uchicago.edu}
+  \quad\textbar\quad
+  \href{https://santiago-perezc.github.io/}{santiago-perezc.github.io}
+  }
+\end{center}
+
+\cvsection{Education}
+
+\begin{itemize}
+  \item \textbf{Ph.D. in Economics}, The University of Chicago \hfill 2023--present
+  \item \textbf{M.A. in Economics}, The University of Chicago \hfill 2024
+  \item \textbf{M.A. in Economics}, Universidad de los Andes \hfill 2022
+  \item \textbf{B.A. in Economics}, Universidad de los Andes \hfill 2020
+\end{itemize}
+
+\cvsection{Research}
+
+\cvsubsection{Working Papers}
+
+\begin{itemize}
+  \item ``Perceived Social Acceptance and Migrants' Financial Inclusion''\\
+  {\small\color{graytext} with Giorgia Barboni and Nicolás de Roux}
+\end{itemize}
+
+\cvsection{Grants, Awards \& Fellowships}
+
+\begin{itemize}
+  \item BFI \& DEC Development Economics Research Fund \hfill 2025
+  \item Pearson Institute Research and Innovation Grant \hfill 2025
+  \item UChicago Graduate Fellowship \hfill 2023--present
+  \item \textit{Cum Laude}, Universidad de los Andes \hfill 2022
+  \item Best GPA Award (x2), Universidad de los Andes \hfill 2017
+\end{itemize}
+
+\cvsection{Research Experience}
+
+\begin{itemize}
+  \item Research Assistant to \textbf{Prof. Luis Martinez}, University of Chicago \hfill 2020--2023
+  \item Research Assistant to \textbf{Prof. Raquel Bernal}, Universidad de los Andes \hfill 2021--2023
+  \item Research Assistant to \textbf{Prof. Daniel Mejia}, Universidad de los Andes \hfill 2019--2020
+\end{itemize}
+
+\cvsection{Teaching Experience}
+
+{\itshape Teaching Assistant, University of Chicago}
+
+\begin{itemize}
+  \item Principles of Microeconomics (Prof. Min Sok Lee) \hfill Autumn 2024
+  \item Empirical Analysis II, PhD (Prof. Stephane Bonhomme) \hfill Winter 2025
+  \item Behavioral Economics and Welfare Analysis (Prof. Matthew Brown) \hfill Autumn 2025
+  \item Introduction to Human Capital (Prof. Pablo Peña) \hfill Spring 2026
+  \item Labor Economics and Public Policy (Prof. Christopher Walters) \hfill Spring 2026
+\end{itemize}
+
+\newpage
+
+\cvsection{Pre-Doctoral Work}
+
+\begin{itemize}
+  \item ``Implementation quality of an early childhood parenting program in Colombia and child development.'' \textbf{Pediatrics}, 2023.\\
+  {\small\color{graytext} with Raquel Bernal, Maria Gómez, and Helen Baker-Henningham}
+
+  \item ``The Effects of Teacher Job Burnout on Child Development.'' (2023)\\
+  {\small\color{graytext} with Raquel Bernal and Maria de la Paz Ferro}
+
+  \item ``Let the Rebels Rule? Evidence on the Economic Effects of Rebel Governance in Colombia.'' (2022)
+\end{itemize}
+
+\vfill
+
+\begin{center}
+  {\footnotesize\color{graytext} Last updated: \today}
+\end{center}
+
+\end{document}
