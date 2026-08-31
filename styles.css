@@ -199,7 +199,6 @@ a:hover {
 .about p {
     font-size: 1rem;
     color: var(--color-text);
-    max-width: 65ch;
 }
 
 .cv-link {
@@ -272,6 +271,66 @@ a:hover {
     background-color: var(--color-accent);
     color: white;
     text-decoration: none;
+}
+
+/* Paper actions row - PDF button beside the abstract toggle */
+.paper-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* Open state takes the full row so the abstract panel gets full width */
+.paper-abstract[open] {
+    width: 100%;
+}
+
+.paper-abstract summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.paper-abstract summary::-webkit-details-marker {
+    display: none;
+}
+
+.paper-abstract summary::before {
+    content: "";
+    border-left: 4px solid currentColor;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.2s ease;
+}
+
+.paper-abstract[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.paper-abstract summary:hover {
+    color: var(--color-accent);
+}
+
+.paper-abstract summary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.abstract-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-xs);
+    padding-top: var(--spacing-xs);
+    border-top: 1px solid var(--color-border);
 }
 
 /* Pre-doctoral Work - Subdued styling */
@@ -405,5 +464,17 @@ a:hover {
     .paper {
         border: 1px solid var(--color-border);
         break-inside: avoid;
+    }
+
+    /* Always print the abstract; the toggle is meaningless on paper.
+       A closed <details> is hidden via content-visibility on its internal
+       slot, so display alone cannot reveal it. Browsers without
+       ::details-content simply print the collapsed card. */
+    .paper-abstract::details-content {
+        content-visibility: visible;
+    }
+
+    .paper-abstract summary {
+        display: none;
     }
 }
