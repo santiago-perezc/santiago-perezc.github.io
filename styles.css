@@ -331,6 +331,11 @@ a:hover {
     margin-top: var(--spacing-xs);
     padding-top: var(--spacing-xs);
     border-top: 1px solid var(--color-border);
+    /* Hyphenation keeps justified text from opening up word gaps.
+       Relies on <html lang="en">. */
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 /* Pre-doctoral Work - Subdued styling */
