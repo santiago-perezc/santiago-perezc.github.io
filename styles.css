@@ -331,11 +331,12 @@ a:hover {
     margin-top: var(--spacing-xs);
     padding-top: var(--spacing-xs);
     border-top: 1px solid var(--color-border);
-    /* Hyphenation keeps justified text from opening up word gaps.
-       Relies on <html lang="en">. */
+    /* Justified, but never break words - at this measure the ragged
+       word gaps are milder than mid-word hyphens. Narrow screens fall
+       back to left-aligned in the 640px query. */
     text-align: justify;
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: none;
+    hyphens: none;
 }
 
 /* Pre-doctoral Work - Subdued styling */
@@ -426,6 +427,11 @@ a:hover {
 
     .paper {
         padding: var(--spacing-sm);
+    }
+
+    /* Column is too narrow to justify without opening word gaps */
+    .abstract-text {
+        text-align: left;
     }
 }
 
